@@ -1,0 +1,340 @@
+ body {
+    background-image: url('img/papeluticha.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    margin-top: 30px; /* espaço depois do login */
+}
+
+        /* Login centralizado */
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .nav input, .nav button {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .nav button {
+            background-color: #ff0000;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Parágrafos e títulos */
+        .paragrafo h2.titulo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .paragrafo p.conteudo {
+            display: none;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ddd;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .paragrafo h2.titulo:hover {
+            color: #ff0000;
+        }
+
+.paragrafo {
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* espaço entre texto e imagem */
+}
+
+
+
+        p {
+            text-align: center;
+        }
+
+        /* Imagem do Itachi */
+        .Itachi {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .Itachi img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+        }
+
+h2, h3, h4 {
+    color: #222;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.produto {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+.produto h3 {
+    margin-bottom: 10px;
+    background-color: red 
+}
+
+.produto button {
+      background-color: #ff6a00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+.produto button:hover {
+    background-color: #e55c00;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.batalha {
+      background-color: black;
+      color: rgb(248, 7, 7);
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+
+
+.carrinho-btn {
+      margin-top: 60px;
+    }
+
+    .carrinho-btn button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .carrinho-btn button:hover {
+      background-color: #218838;
+    }
+
+
+#nome {
+      font-weight: bold;
+      font-size: 22px;
+      border: none;
+      background-color: #1a1a1a;
+      color: #fd2802;
+      display: flex;
+      justify-items: center;
+    }
+
+    header {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #fd2802;
+      display: flex;
+      justify-items: center;
+      background-color: #1a1a1a
+    }
+
+
+
+    /* =================== ESTILO GLOBAL =================== */
+
+h2, h3, h4 {
+    color: #ff3333;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+select {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #ff3333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+/* =================== ESTILO DA PÁGINA CARRINHO =================== */
+#listaProdutos p {
+    background-color: #e60b0b;
+    border-left: 4px solid #ff3333;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+#totalCompra {
+    font-size: 1.5em;
+    color: #00ff99;
+    margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.formulario input {
+  padding: 10px;
+  font-size: 16px;
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid #0c0101;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 30px;
+}
+
+.lado-esquerdo,
+.lado-direito {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botoes button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #dd0505;
+  color: rgb(3, 12, 26);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+  background-color: #140303;
+}
+
+.tabela-usuarios {
+  display: flex;
+  justify-content: center;
+  background-color: #f00404;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  font-size: 18px;
+}
+
+table th,
+table td {
+  border: 1px solid #e00808;
+  padding: 12px;
+  text-align: center;
+}
+
+table th {
+  background-color: #ca0707;
+}
+

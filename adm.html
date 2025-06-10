@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela do ADM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bd.js"></script>
+    <script src="js/adm.js"></script>
+</head>
+<body onload="verificarAdmin(); listar();">
+  <h2 class="titulo">Painel do ADM Babadeiro</h2>
+
+  <div class="formulario">
+    <input type="text" id="id" placeholder="ID" disabled>
+    <input type="text" id="login" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+  </div>
+
+  <div class="botoes">
+    <div class="lado-esquerdo">
+      <button onclick="adicionar()">Adicionar</button>
+      <button onclick="buscar()">Buscar</button>
+      <button onclick="atualizar()">Atualizar</button>
+    </div>
+    <div class="lado-direito">
+      <button onclick="apagar()">Apagar</button>
+      <button onclick="listar()">Listar Tudo</button>
+      <button onclick="sair()">Sair</button>
+    </div>
+  </div>
+
+  <div id="tabelaUsuarios" class="tabela-usuarios"></div>
+</body>
+</html>

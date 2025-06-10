@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Dende Art</title>
+    <script src="js/code.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+ <!-- aquele dicionario boladão -->
+<body onload="dicionario()">
+
+    <!-- Login -->
+    <div class="container">
+        <div class="nav">
+            <input type="text" id="login" placeholder="Login">
+            <input type="password" id="password" placeholder="Senha">
+            <button type="button" onclick="logar()">Login</button>
+        </div>
+    </div>
+
+    <!-- conteudo escondido -->
+ <div class="conteudo-central">
+    <div class="paragrafo">
+        <h2 class="titulo" onclick="toggleTexto(this)">História do Itachi</h2>
+        <p class="conteudo"><strong>Itachi foi um prodígio do clã Uchiha, ingressando na ANBU ainda jovem. Sempre priorizou a paz, mesmo que isso significasse tomar decisões difíceis. Sua vida foi marcada por sacrifícios silenciosos em prol da vila.</strong></p>
+
+        <h2 class="titulo" onclick="toggleTexto(this)">Clã</h2>
+        <p class="conteudo"><strong>Membro do poderoso clã Uchiha, Itachi foi forçado a eliminar quase todos os seus parentes para evitar uma guerra civil em Konoha. Ele poupou apenas seu irmão, Sasuke, a quem amava profundamente.</strong></p>
+
+        <h2 class="titulo" onclick="toggleTexto(this)">Morte</h2>
+        <p class="conteudo"><strong>Itachi morreu em um combate contra Sasuke, revelando apenas após sua morte que sempre protegeu o irmão e a vila. Sua morte trouxe à tona a verdade sobre seus atos e o transformou em um herói trágico.</strong></p>
+    </div>
+ <!-- imagem representativa -->
+    <div class="Itachi">
+        <img src="img/itachichibi.jfif" alt="Itachi chibi">
+    </div>
+</div>
+ <!-- esconde-esconde de titulos -->
+    <script>
+        function toggleTexto(titulo) {
+            const texto = titulo.nextElementSibling;
+            texto.style.display = (texto.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+</body>
+
+</body>
+</html>

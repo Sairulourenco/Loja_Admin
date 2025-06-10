@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Produtos</title>
+</head>
+<body onload="carregarUsuario()">
+
+  <header>
+    Bem vindo: <input type="text" id="nome" style="border: 0;" disabled />
+  </header>
+
+  <h4 class="batalha"><strong>Deus te pague e amém!</strong></h4>
+
+  <div class="produtos">
+    <div class="produto">
+      <h3>Chibi do Itachi</h3>
+      <img src="img/chidori.jfif" alt="itachi chibi" />
+      <p>R$ 45,00</p>
+      <button onclick="adicionarProduto('Itachi chibi', 45)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <h3>Sasuke chibi</h3>
+      <img src="img/sasukechibi.jfif" alt="sasuke chibi" />
+      <p>R$ 230,00</p>
+      <button onclick="adicionarProduto('Sasuke Chibi', 230)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+      <h3>Coleção</h3>
+      <img src="img/todos.jfif" alt="coleção de chibis" />
+      <p>R$ 90,00</p>
+      <button onclick="adicionarProduto('Coleção', 90)">Adicionar ao carrinho</button>
+    </div>
+  </div>
+
+  <div class="carrinho-btn">
+    <a href="carrinho.html"><button>Ver Carrinho</button></a>
+  </div>
+
+  <button onclick="sair()">Sair</button>
+
+  <script>
+    function carregarUsuario() {
+      const user = sessionStorage.getItem("usuario");
+      if (!user) window.location.href = "index.html";
+      document.getElementById("nome").value = user; // CORRIGIDO: id era "nome", não "nomeUsuario"
+    }
+
+    function adicionarProduto(nome, preco) {
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      carrinho.push({ nome, preco });
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      alert(`${nome} adicionado ao carrinho!`);
+    }
+
+    function sair() {
+      sessionStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

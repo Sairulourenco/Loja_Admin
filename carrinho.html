@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="mostrarCarrinho()">
+  <h2>Carrinho de <span id="usuarioCarrinho"></span></h2>
+
+  <div id="listaProdutos"></div>
+  <h3 id="totalCompra"></h3>
+
+  <h4>Escolha a forma de pagamento:</h4>
+  <select id="pagamento">
+    <option value="pix">PIX</option>
+    <option value="cartao">Cartão de Crédito</option>
+    <option value="boleto">Boleto Bancário</option>
+  </select>
+
+  <button onclick="finalizarCompra()">Pagar</button>
+
+  <script>
+    function mostrarCarrinho() {
+      const usuario = sessionStorage.getItem("usuario");
+      if (!usuario) window.location.href = "index.html";
+      document.getElementById("usuarioCarrinho").textContent = usuario;
+
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      const lista = document.getElementById("listaProdutos");
+      let total = 0;
+
+      if (carrinho.length === 0) {
+        lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        document.getElementById("totalCompra").textContent = "";
+        return;
+      }
+
+      lista.innerHTML = ""; // Limpar conteúdo antigo antes de mostrar
+      carrinho.forEach((item) => {
+        const linha = document.createElement("p");
+        linha.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        lista.appendChild(linha);
+        total += item.preco;
+      });
+
+      document.getElementById("totalCompra").textContent = "Total: R$ " + total.toFixed(2);
+    }
+
+    function finalizarCompra() {
+      const metodo = document.getElementById("pagamento").value;
+      alert(`Compra finalizada com pagamento via ${metodo.toUpperCase()}. Deus te pague!`);
+
+      localStorage.removeItem("carrinho");
+      window.location.href = "outra.html"; // ou index.html, se preferir
+    }
+  </script>
+</body>
+</html>
